@@ -1,0 +1,16 @@
+打开/etc/profile末尾处添加
+export JAVA_HOME=/opt/java/jdk1.8.0_60
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${CLASSPATH}:${JAVA_HOME}/lib:${JAVA_HOME}/jre/lib
+export PATH=${JAVA_HOME}/bin:${JRE_HOME}/bin:$PATH:$HOME/bin:${TOMCAT_HOME}/bin
+export TOMCAT_HOME=/opt/tomcat/apache-tomcat-8.0.26
+
+打开/etc/environment末尾处添加
+export JAVA_HOME=/opt/java/jdk1.8.0_60
+export JRE_HOME=/opt/java/jdk1.8.0_60/jre
+export CLASSPATH=.:${CLASSPATH}:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export TOMCAT_HOME=/opt/tomcat/apache-tomcat-8.0.26
+
+打开apache-tomcat-8.0.26/bin/catalina.sh添加以下内容（大概100行左右）
+JAVA_HOME=/opt/java/jdk1.8.0_60
+JAVA_OPTS="$JAVA_OPTS -server -Xms512m -Xmx1024m"

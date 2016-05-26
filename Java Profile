@@ -1,8 +1,0 @@
-/etc/profile
-
-export JAVA_HOME=/opt/java/jdk1.7.0_65
-export JRE_HOME=${JAVA_HOME}/jre
-export CLASSPATH=.:${CLASSPATH}:${JAVA_HOME}/lib:${JAVA_HOME}/jre/lib
-export PATH=${JAVA_HOME}/bin:${JRE_HOME}/bin:$PATH:$HOME/bin:${TOMCAT_HOME}/bin
-export TOMCAT_HOME=/opt/tomcat/apache-tomcat-7.0.54
-
